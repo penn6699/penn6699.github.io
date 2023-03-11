@@ -23,23 +23,19 @@
   <script>
     var gitalkConfig = {
 
-      clientID: '056f5d799e57e0f892db',
+        clientID: '056f5d799e57e0f892db',
         clientSecret: '2a0a073bb5dd91416af33fd6b20f4746834f0cad',
-        repo: 'penn6699.github.io',//# gitalk 地址Repository name，例如：xxxx.github.io
+        repo: 'penn6699.github.io',//# gitalk issues Repository name，例如：xxxx.github.io
         owner: 'penn6699',
         admin: ['penn6699'],
-        id: location.pathname, // 返回当前 URL 的路径部分作为id # 文章页面的链接地址就是ID
+        id: location.pathname, // 返回当前 URL 的路径部分作为id
         language:'zh-CN', // 语言
-        distractionFreeMode: false,//Enable hot key (cmd|ctrl + enter) submit comment.
-
-        // labels: "gitalk",// # Github issue labels. If you used to use Gitment, you can change it
-        // perPage: 15,// # Pagination size, with maximum 100.
-        // pagerDirection: "last",//# Comment sorting direction, available values are 'last' and 'first'.
-        // createIssueManually: true //# 设置为true，如果是管理员登录，会自动创建issue，如果是false，需要管理员手动添加第一个评论(issue)
+        distractionFreeMode: false
 
     };
     window.$docsify = {
       name: '修炼者驿站',
+      //logo:'./favicon.ico',
       repo: 'https://github.com/penn6699/penn6699.github.io',
       auto2top: true,
       coverpage: true,
