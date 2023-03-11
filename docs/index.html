@@ -22,13 +22,28 @@
   <div id="app"></div>
   <script>
     var gitalkConfig = {
-      clientID: '084f309ea8bc385148bc',
-      clientSecret: 'fa4bff71adc7fbb44a7ca6deffecc9ec43e29301',
-      accessToken: '30c55e31acbb0cb61d30f92d14e32541880eefaf',
-      repo: 'Nodejs-Roadmap',
-      owner: 'q-angelo',
-      admin: ["q-angelo"],
-      distractionFreeMode: false
+      // clientID: '084f309ea8bc385148bc',
+      // clientSecret: 'fa4bff71adc7fbb44a7ca6deffecc9ec43e29301',
+      // accessToken: '30c55e31acbb0cb61d30f92d14e32541880eefaf',
+      // repo: 'Nodejs-Roadmap',
+      // owner: 'q-angelo',
+      // admin: ["q-angelo"],
+      // distractionFreeMode: false
+      clientID: '056f5d799e57e0f892db',
+        clientSecret: '2a0a073bb5dd91416af33fd6b20f4746834f0cad',
+        // accessToken: '',
+        repo: 'penn6699',//# 您的博客的github地址Repository name，例如：xxxx.github.io
+        owner: 'penn6699',
+        admin: ['penn6699'],
+        id: location.pathname, // 返回当前 URL 的路径部分作为id # 文章页面的链接地址就是ID
+        language:'zh-CN', // 语言
+        distractionFreeMode: false,//Enable hot key (cmd|ctrl + enter) submit comment.
+
+        // labels: "gitalk",// # Github issue labels. If you used to use Gitment, you can change it
+        // perPage: 15,// # Pagination size, with maximum 100.
+        // pagerDirection: "last",//# Comment sorting direction, available values are 'last' and 'first'.
+        // createIssueManually: false //# 设置为true，如果是管理员登录，会自动创建issue，如果是false，需要管理员手动添加第一个评论(issue)
+
     };
     window.$docsify = {
       name: '修炼者驿站',
