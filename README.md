@@ -7,8 +7,9 @@
 
 > 你若要喜爱你自己的价值，你就得给世界创造价值。——歌德
 
-##安装docsify
+## 安装docsify
 npm i docsify-cli -g
-##本地启动项目
+
+## 本地启动项目
 docsify serve docs
 
