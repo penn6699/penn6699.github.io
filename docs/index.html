@@ -7,7 +7,7 @@
   <meta name="description" content="Description">
   <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
   <link rel="stylesheet" href="//unpkg.com/docsify/lib/themes/vue.css"> 
-  <link rel="stylesheet" href="//unpkg.com/gitalk/dist/gitalk.css">
+  <!-- <link rel="stylesheet" href="//unpkg.com/gitalk/dist/gitalk.css"> -->
   <script>
       var _hmt = _hmt || [];
       (function() {
@@ -60,27 +60,36 @@
       plugins: [
         function (hook, vm) {
           hook.doneEach(function() {
-            var label, domObj, main, divEle, gitalk;
+            var label, domObj, main, divEle, giteement;
             label = vm.route.path.split("/").pop();
             domObj = Docsify.dom;
             main = domObj.getNode("#main");
 
             Array.apply(
               null,
-              document.querySelectorAll("div.gitalk-container")
+              document.querySelectorAll("div.giteement-container")
             ).forEach(function(ele) {
               ele.remove();
             });
 
             divEle = domObj.create("div");
-            divEle.id = "gitalk-container-" + label;
-            divEle.className = "gitalk-container";
+            divEle.id = "giteement-container-" + label;
+            divEle.className = "giteement-container";
             divEle.style = "width: " + main.clientWidth + "px; margin: 0 auto 20px;";
             domObj.appendTo(domObj.find(".content"), divEle);
-            gitalk = new Gitalk(
-              Object.assign(gitalkConfig, { id: !label ? "home" : label })
-            );
-            gitalk.render("gitalk-container-" + label);
+
+            var giteement = new Giteement({
+              id: !label ? "home" : label,
+              owner: 'penn6699',
+              repo: 'penn6699',
+              backcall_uri: 'https://penn6699.gitee.io',
+              oauth_uri: 'https://cors-anywhere.herokuapp.com/https://gitee.com/oauth/token',
+              oauth: {
+                client_id: '0e9d5479b5d4c64190f25df0ca46c9b98ec081cf5a8f3644fa66df24cd42f5cb',
+                client_secret: '96bf09e480e47a592523b5c462d88429e553569fbbe63e1e0b068da9f4fb31f8'
+              },
+            });
+            giteement.render("giteement-container-" + label);
           });
         }
       ]
@@ -88,7 +97,11 @@
   </script>
   
   <script src="//unpkg.com/docsify/lib/docsify.min.js"></script>
-  <script src="//unpkg.com/gitalk/dist/gitalk.min.js"></script>
+  <!-- <script src="//unpkg.com/gitalk/dist/gitalk.min.js"></script> -->
+  <link rel="stylesheet" href="https://giteement.oss-cn-beijing.aliyuncs.com/default.css">
+  <script src="https://giteement.oss-cn-beijing.aliyuncs.com/giteement.browser.js"></script>
+  <script src="https://giteement.oss-cn-beijing.aliyuncs.com/oauthcallback.browser.js"></script>
+
   <script src="https://cdn.jsdelivr.net/npm/docsify@4/lib/plugins/search.js"></script>
   <script src="//unpkg.com/docsify-pagination/dist/docsify-pagination.min.js"></script>
   <script src="//unpkg.com/docsify/lib/plugins/zoom-image.js"></script>
