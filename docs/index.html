@@ -20,27 +20,12 @@
 </head>
 <body>
   <div id="app"></div>
+
   <script>
-    var gitalkConfig = {
 
-      clientID: '056f5d799e57e0f892db',
-        clientSecret: '2a0a073bb5dd91416af33fd6b20f4746834f0cad',
-        repo: 'penn6699',//# 您的博客的github地址Repository name，例如：xxxx.github.io
-        owner: 'penn6699',
-        admin: ['penn6699'],
-        id: location.pathname, // 返回当前 URL 的路径部分作为id # 文章页面的链接地址就是ID
-        language:'zh-CN', // 语言
-        distractionFreeMode: false,//Enable hot key (cmd|ctrl + enter) submit comment.
-
-        labels: "gitalk",// # Github issue labels. If you used to use Gitment, you can change it
-        perPage: 15,// # Pagination size, with maximum 100.
-        pagerDirection: "last",//# Comment sorting direction, available values are 'last' and 'first'.
-        createIssueManually: true //# 设置为true，如果是管理员登录，会自动创建issue，如果是false，需要管理员手动添加第一个评论(issue)
-
-    };
     window.$docsify = {
       name: '修炼者驿站',
-      repo: 'https://github.com/penn6699/penn6699',
+      repo: 'https://gitee.com/penn6699/penn6699',
       auto2top: true,
       coverpage: true,
       loadSidebar: true,
@@ -73,13 +58,13 @@
             });
 
             divEle = domObj.create("div");
-            divEle.id = "giteement-container-" + label;
+            divEle.id = "giteement-container-btn" //+ label;
             divEle.className = "giteement-container";
             divEle.style = "width: " + main.clientWidth + "px; margin: 0 auto 20px;";
             domObj.appendTo(domObj.find(".content"), divEle);
 
             var giteement = new Giteement({
-              id: !label ? "home" : label,
+              id: label,//!label ? "home" : label,
               owner: 'penn6699',
               repo: 'penn6699',
               backcall_uri: 'https://penn6699.gitee.io',
@@ -89,23 +74,24 @@
                 client_secret: '96bf09e480e47a592523b5c462d88429e553569fbbe63e1e0b068da9f4fb31f8'
               },
             });
-            giteement.render("giteement-container-" + label);
+            giteement.render("giteement-container-btn");// + label);
           });
         }
       ]
     }
   </script>
+    <script src="//unpkg.com/docsify/lib/docsify.min.js"></script>
+    <!-- <script src="//unpkg.com/gitalk/dist/gitalk.min.js"></script> -->
+    <link rel="stylesheet" href="https://giteement.oss-cn-beijing.aliyuncs.com/default.css">
+    <script src="https://giteement.oss-cn-beijing.aliyuncs.com/giteement.browser.js"></script>
+    <script src="https://giteement.oss-cn-beijing.aliyuncs.com/oauthcallback.browser.js"></script>
   
-  <script src="//unpkg.com/docsify/lib/docsify.min.js"></script>
-  <!-- <script src="//unpkg.com/gitalk/dist/gitalk.min.js"></script> -->
-  <link rel="stylesheet" href="https://giteement.oss-cn-beijing.aliyuncs.com/default.css">
-  <script src="https://giteement.oss-cn-beijing.aliyuncs.com/giteement.browser.js"></script>
-  <script src="https://giteement.oss-cn-beijing.aliyuncs.com/oauthcallback.browser.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/docsify@4/lib/plugins/search.js"></script>
+    <script src="//unpkg.com/docsify-pagination/dist/docsify-pagination.min.js"></script>
+    <script src="//unpkg.com/docsify/lib/plugins/zoom-image.js"></script>
+    <script src="//unpkg.com/prismjs/components/prism-bash.js"></script>
+    <script src="//unpkg.com/prismjs/components/prism-java.min.js"></script>
+    
 
-  <script src="https://cdn.jsdelivr.net/npm/docsify@4/lib/plugins/search.js"></script>
-  <script src="//unpkg.com/docsify-pagination/dist/docsify-pagination.min.js"></script>
-  <script src="//unpkg.com/docsify/lib/plugins/zoom-image.js"></script>
-  <script src="//unpkg.com/prismjs/components/prism-bash.js"></script>
-  <script src="//unpkg.com/prismjs/components/prism-java.min.js"></script>
 </body>
 </html>
