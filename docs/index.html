@@ -25,12 +25,17 @@
 
         clientID: '056f5d799e57e0f892db',
         clientSecret: '2a0a073bb5dd91416af33fd6b20f4746834f0cad',
-        repo: 'penn6699.github.io',//# gitalk issues Repository name，例如：xxxx.github.io
+        repo: 'penn6699.github.io',//# gitalk issues 所在库的 name，例如：xxxx.github.io
         owner: 'penn6699',
         admin: ['penn6699'],
         id: location.pathname, // 返回当前 URL 的路径部分作为id
         language:'zh-CN', // 语言
-        distractionFreeMode: false
+        distractionFreeMode: false,//Enable hot key (cmd|ctrl + enter) submit comment.
+
+        labels: "gitalk",// # Github issue labels. If you used to use Gitment, you can change it
+        perPage: 15,// # Pagination size, with maximum 100.
+        pagerDirection: "last",//# Comment sorting direction, available values are 'last' and 'first'.
+        createIssueManually: true //# 设置为true，如果是管理员登录，会自动创建issue，如果是false，需要管理员手动添加第一个评论(issue)
 
     };
     window.$docsify = {
