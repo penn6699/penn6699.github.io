@@ -113,6 +113,11 @@ export default defineConfig({
       text: '为此页提供修改建议',
     },
 
+    docFooter:{
+      prev:'上一页',
+      next:'下一页'
+    },
+
     outline: {
       label: '本页目录',
       level: [2, 3],
@@ -124,53 +129,76 @@ export default defineConfig({
       { icon: 'discord', link: 'https://chat.vitejs.dev' },
       { icon: 'github', link: 'https://github.com/vitejs/vite' },
     ],
-
-    algolia: {
-      appId: '7H67QR5P0A',
-      apiKey: 'deaab78bcdfe96b599497d25acc6460e',
-      indexName: 'vitejs',
-      searchParameters: {
-        facetFilters: ['tags:cn']
-      },
-      placeholder: '搜索文档',
-      translations: {
-        button: {
-          buttonText: '搜索'
-        },
-        modal: {
-          searchBox: {
-            resetButtonTitle: '清除查询条件',
-            resetButtonAriaLabel: '清除查询条件',
-            cancelButtonText: '取消',
-            cancelButtonAriaLabel: '取消'
+    
+    // 本地搜索
+    search: {
+      provider: 'local',
+      options:{
+        translations: {
+          button: {
+            buttonText: '搜索'
           },
-          startScreen: {
-            recentSearchesTitle: '搜索历史',
-            noRecentSearchesText: '没有搜索历史',
-            saveRecentSearchButtonTitle: '保存到搜索历史',
-            removeRecentSearchButtonTitle: '从搜索历史中移除',
-            favoriteSearchesTitle: '收藏',
-            removeFavoriteSearchButtonTitle: '从收藏中移除'
-          },
-          errorScreen: {
-            titleText: '无法获取结果',
-            helpText: '你可能需要检查你的网络连接'
-          },
-          footer: {
-            selectText: '选择',
-            navigateText: '切换',
-            closeText: '关闭',
-            searchByText: '搜索供应商'
-          },
-          noResultsScreen: {
+          modal: {
+            displayDetails: '',
+            resetButtonTitle: '重置',
+            backButtonTitle: '',
             noResultsText: '无法找到相关结果',
-            suggestedQueryText: '你可以尝试查询',
-            reportMissingResultsText: '你认为这个查询应该有结果？',
-            reportMissingResultsLinkText: '向我们反馈'
+            footer: {
+              selectText: '选择',
+              navigateText: '切换',
+              closeText: '关闭',
+            }
           }
         }
-      },
+      }
     },
+
+    // algolia: {
+    //   appId: '7H67QR5P0A',
+    //   apiKey: 'deaab78bcdfe96b599497d25acc6460e',
+    //   indexName: 'vitejs',
+    //   searchParameters: {
+    //     facetFilters: ['tags:cn']
+    //   },
+    //   placeholder: '搜索文档',
+    //   translations: {
+    //     button: {
+    //       buttonText: '搜索'
+    //     },
+    //     modal: {
+    //       searchBox: {
+    //         resetButtonTitle: '清除查询条件',
+    //         resetButtonAriaLabel: '清除查询条件',
+    //         cancelButtonText: '取消',
+    //         cancelButtonAriaLabel: '取消'
+    //       },
+    //       startScreen: {
+    //         recentSearchesTitle: '搜索历史',
+    //         noRecentSearchesText: '没有搜索历史',
+    //         saveRecentSearchButtonTitle: '保存到搜索历史',
+    //         removeRecentSearchButtonTitle: '从搜索历史中移除',
+    //         favoriteSearchesTitle: '收藏',
+    //         removeFavoriteSearchButtonTitle: '从收藏中移除'
+    //       },
+    //       errorScreen: {
+    //         titleText: '无法获取结果',
+    //         helpText: '你可能需要检查你的网络连接'
+    //       },
+    //       footer: {
+    //         selectText: '选择',
+    //         navigateText: '切换',
+    //         closeText: '关闭',
+    //         searchByText: '搜索供应商'
+    //       },
+    //       noResultsScreen: {
+    //         noResultsText: '无法找到相关结果',
+    //         suggestedQueryText: '你可以尝试查询',
+    //         reportMissingResultsText: '你认为这个查询应该有结果？',
+    //         reportMissingResultsLinkText: '向我们反馈'
+    //       }
+    //     }
+    //   },
+    // },
 
     // Using WwAds for China
     // carbonAds: {
