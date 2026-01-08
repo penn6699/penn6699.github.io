@@ -66,6 +66,14 @@ export const zh = defineConfig({
       // ]
     },
 
+    // 自定义 404 页面
+    notFound: {
+      title: '页面未找到', // 404 页面的主标题
+      quote:
+        '但如果你不改变方向，并且继续寻找，你可能最终会到达你所前往的地方。', // 页面上的引用语或说明文字
+      linkLabel: '前往首页', // 返回首页链接的显示文本
+      linkText: '带我回首页' // 链接按钮上的文字（某些主题布局下使用）
+    },
     darkModeSwitchLabel: '暗黑模式',
     outlineTitle: '大纲',
     docFooter: {
