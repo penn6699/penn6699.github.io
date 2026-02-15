@@ -6,7 +6,7 @@ This project mainly includes the following contents:
 
 - A JS mind map library that does not rely on any framework and can be used to quickly develop web mind map products.
 
-> Development documentation: [Course](../../course/course1.md).
+> Development documentation: [Course].
 
 - A web mind map developed based on the mind map library, Vue 2. x, and ElementUI. It can manipulate local files on the computer and can be used as an online mind map application, as well as self deployment and secondary development.
 
@@ -39,7 +39,7 @@ This project mainly includes the following contents:
 - Support collaborative editing
 - Support demonstration mode
 
-The official provides the many plugins, which can be introduced as needed (a certain function may not be effective because you did not introduce the corresponding plugin). 
+The official provides the many plugins, which can be introduced as needed (a certain function may not be effective because you did not introduce the corresponding plugin).
 
 Features that will not be implemented in this project:
 
@@ -62,17 +62,17 @@ This is an online mind map built using the `simple-mind-map` library and based
 on `Vue2.x` and `ElementUI`. Features include:
 
 - Toolbar, which supports inserting and deleting nodes, and editing node
-      images, icons, hyperlinks, notes, tags, and summaries
+  images, icons, hyperlinks, notes, tags, and summaries
 - Sidebar, with panels for basic style settings, node style settings,
-      outline, theme selection, and structure selection
+  outline, theme selection, and structure selection
 - Import and export functionality; data is saved in the browser's local
-      storage by default, but it also supports creating, opening, and editing
-      local files on the computer directly
+  storage by default, but it also supports creating, opening, and editing
+  local files on the computer directly
 - Right-click menu, which supports operations such as expanding, collapsing,
-      and organizing layout
+  and organizing layout
 - Bottom bar, which supports node and word count statistics, switching
-      between edit and read-only modes, zooming in and out, and switching to
-      full screen, support mini map
+  between edit and read-only modes, zooming in and out, and switching to
+  full screen, support mini map
 
 Provide document page service.
 
@@ -132,5 +132,4 @@ Unsupported: `IE` browser.
 
 > Example: You can add the following content to any page in your application, such as the About page, Help page, Documentation page, Open Source Declaration, etc.:
 >
-> This product's mind map is developed based on the SimpleMindMap project, and the copyright belongs to the source project,  [Open source protocol](https://github.com/wanglin2/mind-map/blob/main/LICENSE)。
-
+> This product's mind map is developed based on the SimpleMindMap project, and the copyright belongs to the source project, [Open source protocol](https://github.com/wanglin2/mind-map/blob/main/LICENSE)。

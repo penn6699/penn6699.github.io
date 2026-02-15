@@ -5,7 +5,7 @@
 解决方法：使用如下引入方式：
 
 ```js
-import MindMap from "simple-mind-map/dist/simpleMindMap.umd.min"
+import MindMap from 'simple-mind-map/dist/simpleMindMap.umd.min'
 ```
 
 `simple-mind-map`包提供未打包的入口字段`module`，依赖的`xml-js`包需要引入`node`环境下的包，所以在`Vite`中获取不到会报错，所以指定引入打包后的入口，相关包都已打包进产物，所以不会报错。
@@ -16,12 +16,16 @@ import MindMap from "simple-mind-map/dist/simpleMindMap.umd.min"
 
 原因为安装的`@svgdotjs/svg.js`版本太高，手动降到`3.0.16`版本即可。
 
-## 3.TypeError: Cannot read properties of undefined (reading 'prototype') at sax.js:222:46 
+## 3.TypeError: Cannot read properties of undefined (reading 'prototype') at sax.js:222:46
 
 可以在打包配置文件中增加如下配置：
 
 ```js
-resolve: { alias: { stream: "stream-browserify" } }
+resolve: {
+  alias: {
+    stream: 'stream-browserify'
+  }
+}
 ```
 
 不同的打包工具可能具体配置不一样，原理就是排除`stream`依赖。
@@ -32,7 +36,7 @@ resolve: { alias: { stream: "stream-browserify" } }
 
 ## 5.引入simple-mind-map报错，报错信息如下：
 
-<img src="../assets/img/错误.jpg" style="width: 850px" />
+<img src="../../assets/img/错误.jpg" style="width: 850px" />
 
 这是因为你的构建环境不支持该js语法，该语法出自`@svgdotjs/svg.js`库，解决方法如下：
 
@@ -44,7 +48,7 @@ resolve: { alias: { stream: "stream-browserify" } }
 
 ## 6.启动服务报quill依赖的错误
 
-<img src="../assets/img/错误2.png" style="width: 850px" />
+<img src="../../assets/img/错误2.png" style="width: 850px" />
 
 当前Node环境不支持用到的js语法，需要编译quill依赖。
 
@@ -66,7 +70,7 @@ mindMap.destroy()
 
 ```css
 #mindMapContainer {
-    font-size: initial;
+  font-size: initial;
 }
 ```
 
@@ -76,7 +80,7 @@ mindMap.destroy()
 
 ```css
 .smm-richtext-node-edit-wrap {
-    font-size: 20px;
+  font-size: 20px;
 }
 ```
 
@@ -84,8 +88,8 @@ mindMap.destroy()
 
 ```js
 new MindMap({
-    el: document.querySelector('#mindMapContainer'),
-    customInnerElsAppendTo: document.querySelector('#mindMapContainer')
+  el: document.querySelector('#mindMapContainer'),
+  customInnerElsAppendTo: document.querySelector('#mindMapContainer')
 })
 ```
 
@@ -106,16 +110,16 @@ mindMap.appendCss(`
 
 ```js
 new MindMap({
-    handleBeingExportSvg: (svg) => {
-        const el = document.createElement('style')
-        el.setAttribute('xmlns', 'http://www.w3.org/1999/xhtml')
-        el.innerHTML = `
+  handleBeingExportSvg: svg => {
+    const el = document.createElement('style')
+    el.setAttribute('xmlns', 'http://www.w3.org/1999/xhtml')
+    el.innerHTML = `
             font-size: 18px;
             background: red;
         `
-        svg.add(el)
-        return svg
-    }
+    svg.add(el)
+    return svg
+  }
 })
 ```
 
@@ -131,10 +135,10 @@ new MindMap({
 
 ```js
 new MindMap({
-    // 传递一个函数，接收按键事件对象e为参数，需要返回true或false，返回true代表允许响应快捷键事件，反之不允许，库默认当事件目标为body，或为文本编辑框元素（普通文本编辑框、富文本编辑框、关联线文本编辑框）时响应快捷键，其他不响应
-    customCheckEnableShortcut: (e) => {
-        return true
-    }
+  // 传递一个函数，接收按键事件对象e为参数，需要返回true或false，返回true代表允许响应快捷键事件，反之不允许，库默认当事件目标为body，或为文本编辑框元素（普通文本编辑框、富文本编辑框、关联线文本编辑框）时响应快捷键，其他不响应
+  customCheckEnableShortcut: e => {
+    return true
+  }
 })
 ```
 

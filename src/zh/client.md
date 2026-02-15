@@ -82,27 +82,27 @@ Linux 用户也可以通过 Flathub 下载：
 
 也可以在任何界面都可以通过`ALT+空格`键唤出其搜索框，然后进入插件应用商店：
 
-<img src="./assets/img/client/utools1.png" style="width: 800px" />
+<img src="../assets/img/client/utools1.png" style="width: 800px" />
 
 输入思绪搜索即可找到思绪思维导图插件:
 
-<img src="./assets/img/client/utools2.png" style="width: 800px" />
+<img src="../assets/img/client/utools2.png" style="width: 800px" />
 
 点击右侧的【获取】按钮即可安装。
 
-<img src="./assets/img/client/utools3.png" style="width: 800px" />
+<img src="../assets/img/client/utools3.png" style="width: 800px" />
 
 安装完后就可以点击【打开】进入使用了~
 
 后续要使用只需要通过`ALT+空格`键唤出搜索框，输入【思绪】然后按回车就可以打开了：
 
-<img src="./assets/img/client/utools4.png" style="width: 800px" />
+<img src="../assets/img/client/utools4.png" style="width: 800px" />
 
 #### 使用小技巧
 
 1.设置为自动分离为独立窗口
 
-<img src="./assets/img/client/utools5.png" style="width: 800px" />
+<img src="../assets/img/client/utools5.png" style="width: 800px" />
 
 这样下次打开就会以独立的窗口打开，如果之前调整过窗口大小，那么再次打开就会默认显示为之前的大小，不用每次都手动调整。
 
@@ -110,7 +110,7 @@ Linux 用户也可以通过 Flathub 下载：
 
 编辑思维导图时，多选节点是通过按住鼠标右键拖动进行框选，这和 uTools 的超级面板功能冲突，导致无法框选，就像下面这样：
 
-<img src="./assets/img/client/utools6.png" style="width: 800px" />
+<img src="../assets/img/client/utools6.png" style="width: 800px" />
 
 所以建议关闭这个功能，或者修改它的触发方式，设置路径为：点击搜索框右侧的头像进入个人中心 -> 点击左下角的个人中心 -> 点击设置 -> 关闭超级面板。
 
