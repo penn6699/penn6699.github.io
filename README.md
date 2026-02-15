@@ -1,6 +1,6 @@
 # mind-map文档站点
 
-# 推送代码到 github
+## 推送代码到 github
 
 添加新的远程仓库（github）
 
