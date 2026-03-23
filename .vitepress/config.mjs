@@ -1,13 +1,13 @@
 import { defineConfig } from 'vitepress'
 import { zh, search as searchZh } from './zh.mjs'
 import { en } from './en.mjs'
-// import { pagefindPlugin } from 'vitepress-plugin-pagefind'
+import llms from 'vitepress-plugin-llms'
 
 // https://vitepress.dev/reference/site-config
 export default defineConfig({
-  // vite: {
-  //   plugins: [pagefindPlugin()]
-  // },
+  vite: {
+    plugins: [llms()]
+  },
   srcDir: 'src',
   base: '/',
   title: 'SimpleMindMap',
