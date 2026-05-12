@@ -3,9 +3,9 @@
 layout: home
 
 hero:
-  name: "SimpleMindMap"
-  text: "一个强大的Web思维导图"
-  tagline: 是一个js思维导图库，也是一个完整的思维导图工具
+  name: "写码也写心"
+  text: ""
+  tagline: "笃行致远"
   image: /home.png
   actions:
     - theme: brand

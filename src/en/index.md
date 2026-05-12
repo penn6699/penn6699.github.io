@@ -3,9 +3,9 @@
 layout: home
 
 hero:
-  name: 'SimpleMindMap'
-  text: 'A powerful web mind map'
-  tagline: It is a JS mind mapping library and a complete mind mapping tool
+  name: 'Write code and write heart'
+  text: ''
+  tagline: 'Go far and work hard'
   image: /home.png
   actions:
     - theme: brand

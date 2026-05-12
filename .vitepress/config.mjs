@@ -10,9 +10,9 @@ export default defineConfig({
   },
   srcDir: 'src',
   base: '/',
-  title: 'SimpleMindMap',
+  // title: '写码也写心',
   head: [
-    ['link', { rel: 'icon', href: './logo.png' }]
+    ['link', { rel: 'icon', href: '/logo.png' }]
     // [
     //   'script',
     //   {

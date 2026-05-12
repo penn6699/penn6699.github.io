@@ -2,12 +2,12 @@ export default {
   logo: '/logo.png',
 
   socialLinks: [
-    { icon: 'github', link: 'https://github.com/wanglin2/mind-map' }
+    { icon: 'gitee', link: 'https://gitee.com/penn6699/penn6699.git' }
   ],
 
   footer: {
     message: 'MIT License.',
-    copyright: 'Copyright © 2024-present mind-map team'
+    copyright: 'Copyright © 2025-present  写码也写心'
   },
 
   outline: {

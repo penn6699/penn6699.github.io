@@ -3,11 +3,14 @@ import common from './common.mjs'
 
 export const zh = defineConfig({
   description: '一个强大的Web思维导图',
+
+  title: '写码也写心',
   themeConfig: {
     ...common,
 
     nav: [
       { text: '在线试用', link: 'https://wanglin2.github.io/mind-map/' },
+      { text: '在线文档', link: 'https://wanglin2.github.io/mind-map-docs/' },
       {
         text: '简介',
         link: '/zh/start/introduction',
