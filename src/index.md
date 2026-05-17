@@ -6,22 +6,16 @@ hero:
   name: "写码也写心"
   text: ""
   tagline: "笃行致远"
-  image: /home.png
-  actions:
-    - theme: brand
-      text: 在线使用
-      link: https://wanglin2.github.io/mind-map/
-    - theme: alt
-      text: 快速开始
-      link: /start/start
+  
+
 
 features:
-  - title: 功能丰富
-    details: 你能想到的和想不到的思维导图的功能它都有。
-  - title: 插件化
-    details: 除核心功能外，其他能力都作为插件提供，按需选择，减少不必要的代码。
-  - title: 易于使用
-    details: 开箱即用，上手简单，配置丰富，文档清晰。
-  - title: 是js库也是工具
-    details: 不仅是一个框架无关的js库，同时也提供了一个完整功能的网页版和客户端思维导图工具。
+  - title: 知行合一
+    details: 在实践中学习，在实践中进步
+  - title: 勇于尝试
+    details: 无论做什么事，都要勇于尝试，就算不能证明我行，也要证明我不行
+  - title: 走自己的道路
+    details: 我没有必要和别人争论什么，我只需要坚持走我的道路就好
+  - title: 先试点，再全面推进
+    details: 新的尝试，都应该谨慎，要先搞试点，要螺旋式的前进，走几步，停下来，看一看，整顿一下，再继续前进
 ---
