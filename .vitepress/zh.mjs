@@ -9,30 +9,77 @@ export const zh = defineConfig({
     ...common,
 
     nav: [
-      { text: '在线试用', link: 'https://wanglin2.github.io/mind-map/' },
-      { text: '在线文档', link: 'https://wanglin2.github.io/mind-map-docs/' },
+      // { text: '在线试用', link: 'https://wanglin2.github.io/mind-map/' },
+      // { text: '在线文档', link: 'https://wanglin2.github.io/mind-map-docs/' },
       {
-        text: '简介',
-        link: '/zh/start/introduction',
-        activeMatch: '/zh/start/'
+        text: '作品集',
+        link: '/zh/sample_reels/short-link',
+        activeMatch: '/zh/sample_reels/'
       },
-      { text: '部署', link: '/zh/start/deploy' },
-      { text: '客户端', link: '/client' },
-      { text: '博客', link: '/blog' },
       {
-        text: '更多',
+        text: '软件',
+        link: '/zh/software/frp',
+        activeMatch: '/zh/software/'
+      },
+      {
+        text: '开发',
         items: [
-          { text: '使用帮助', link: '/help/help1', activeMatch: '/help/' },
-          { text: '理想文档', link: 'https://github.com/wanglin2/lx-doc' },
-          {
-            text: '意见反馈',
-            link: 'https://github.com/wanglin2/mind-map/issues'
-          }
+          { text: 'Python', link: '/zh/python/python' },
+          { text: 'Django', link: '/zh/django/django' },
+          { text: '前端', link: '/zh/frontend/frontend' }
+        ]
+      },
+      {
+        text: '开源项目',
+        items: [
+          { text: '网络开源项目', link: '/zh/open_source/network/network' }
+          // , { text: '我的开发项目', link: '/zh/open_source/mine/mine' }
         ]
       }
+
+      // {
+      //   text: '简介',
+      //   link: '/zh/start/introduction',
+      //   activeMatch: '/zh/start/'
+      // },
+      // { text: '客户端', link: '/client' },
+      // {
+      //   text: '更多',
+      //   items: [
+      //     { text: '使用帮助', link: '/help/help1', activeMatch: '/help/' },
+      //     { text: '理想文档', link: 'https://github.com/wanglin2/lx-doc' },
+      //     {
+      //       text: '意见反馈',
+      //       link: 'https://github.com/wanglin2/mind-map/issues'
+      //     }
+      //   ]
+      // }
     ],
 
     sidebar: {
+      '/zh/sample_reels/': [
+        { text: '短链接管理软件', link: '/zh/sample_reels/short-link' }
+      ],
+      '/zh/software/': [
+        {
+          text: '内网穿透软件',
+          items: [{ text: 'FRP', link: '/zh/software/frp' }]
+        }
+      ],
+      '/zh/python/': [{ text: 'Python', link: '/zh/python/python' }],
+      '/zh/django/': [{ text: 'Django', link: '/zh/django/django' }],
+      '/zh/frontend/': [
+        { text: '前端', link: '/zh/frontend/frontend' },
+        {
+          text: 'JavaScript',
+          items: [{ text: 'JS', link: '/zh/frontend/javascript' }]
+        }
+      ],
+      '/zh/open_source/mine/': [{ text: '我的开发项目', link: '/zh/open_source/mine/mine' }],
+      '/zh/open_source/network/': [{ text: '网络开源项目', link: '/zh/open_source/network/network' }],
+
+
+
       '/zh/start/': [
         { text: '简介', link: '/zh/start/introduction' },
         { text: '开始', link: '/zh/start/start' },
@@ -40,20 +87,9 @@ export const zh = defineConfig({
         { text: '部署', link: '/zh/start/deploy' },
         { text: '贡献', link: '/zh/start/contribute' },
         { text: '更新记录', link: '/zh/start/changelog' }
-        // {
+
         //   text: '收费',
         //   items: [
-        //     {
-        //       text: 'HandDrawnLikeStyle插件',
-        //       link: '/plugins/handDrawnLikeStyle'
-        //     },
-        //     { text: 'Notation插件', link: '/plugins/notation' },
-        //     { text: 'Numbers插件', link: '/plugins/numbers' },
-        //     { text: 'Freemind插件', link: '/plugins/freemind' },
-        //     { text: 'Excel插件', link: '/plugins/excel' },
-        //     { text: 'Checkbox插件', link: '/plugins/checkbox' },
-        //     { text: 'Lineflow插件', link: '/plugins/lineflow' },
-        //     { text: 'Momentum插件', link: '/plugins/momentum' },
         //     { text: 'RightFishbone插件', link: '/plugins/rightFishbone' },
         //     { text: 'NodeLink插件', link: '/plugins/nodeLink' }
         //   ]

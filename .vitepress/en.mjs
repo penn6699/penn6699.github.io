@@ -8,8 +8,8 @@ export const en = defineConfig({
     ...common,
     
     nav: [
-      { text: 'Online trial', link: 'https://wanglin2.github.io/mind-map/' },
-      { text: 'Online docs', link: 'https://wanglin2.github.io/mind-map-docs/' },
+      // { text: 'Online trial', link: 'https://wanglin2.github.io/mind-map/' },
+      // { text: 'Online docs', link: 'https://wanglin2.github.io/mind-map-docs/' },
       // {
       //   text: 'Start',
       //   link: '/en/start/introduction',
