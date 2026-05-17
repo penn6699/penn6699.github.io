@@ -50,9 +50,10 @@ export default defineConfig({
   },
   locales: {
     root: { label: '中文', ...zh },
-    en: {
-      label: 'English',
-      ...en
-    }
+    // // 屏蔽国际语言切换  中文互换英文
+    // en: {
+    //   label: 'English',
+    //   ...en
+    // }
   }
 })
