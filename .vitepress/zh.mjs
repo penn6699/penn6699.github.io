@@ -24,6 +24,7 @@ export const zh = defineConfig({
       {
         text: '开发',
         items: [
+          { text: 'Docker', link: '/zh/docker/docker' },
           { text: 'Python', link: '/zh/python/python' },
           { text: 'Django', link: '/zh/django/django' },
           { text: '前端', link: '/zh/frontend/frontend' }
@@ -66,19 +67,29 @@ export const zh = defineConfig({
           items: [{ text: 'FRP', link: '/zh/software/frp' }]
         }
       ],
-      '/zh/python/': [{ text: 'Python', link: '/zh/python/python' }],
+      '/zh/docker/': [
+        { text: 'Docker', link: '/zh/docker/docker' },
+        { text: 'Docker操作命令', link: '/zh/docker/i_0001_command' },
+      ],
+      '/zh/python/': [
+        { text: 'Python', link: '/zh/python/python' },
+        { text: 'Python虚拟环境', link: '/zh/python/i_0001_venv' }
+      
+      ],
       '/zh/django/': [{ text: 'Django', link: '/zh/django/django' }],
       '/zh/frontend/': [
         { text: '前端', link: '/zh/frontend/frontend' },
         {
           text: 'JavaScript',
-          items: [{ text: 'JS', link: '/zh/frontend/javascript' }]
+          items: [{ text: 'JS', link: '/zh/frontend/i_0001_javascript' }]
         }
       ],
-      '/zh/open_source/mine/': [{ text: '我的开发项目', link: '/zh/open_source/mine/mine' }],
-      '/zh/open_source/network/': [{ text: '网络开源项目', link: '/zh/open_source/network/network' }],
-
-
+      '/zh/open_source/mine/': [
+        { text: '我的开发项目', link: '/zh/open_source/mine/mine' }
+      ],
+      '/zh/open_source/network/': [
+        { text: '网络开源项目', link: '/zh/open_source/network/network' }
+      ],
 
       '/zh/start/': [
         { text: '简介', link: '/zh/start/introduction' },

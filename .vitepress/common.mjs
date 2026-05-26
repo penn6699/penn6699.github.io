@@ -11,6 +11,6 @@ export default {
   },
 
   outline: {
-    level: [2, 3]
+    level: [2, 5]
   }
 }
