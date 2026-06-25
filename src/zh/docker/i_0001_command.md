@@ -15,7 +15,35 @@ Docker 常用操作命令的分类整理，涵盖**镜像管理、容器生命�
 | `docker save <镜像> > file.tar`      | 导出镜像      | `docker save nginx > nginx.tar` |
 | `docker load < file.tar`             | 导入镜像      | `docker load < nginx.tar`       |
 
----
+```bash
+# 导出保存Docker镜像 ---------------------
+
+# 基本语法
+docker save -o 输出文件名.tar 镜像名:标签
+
+# 示例
+docker save -o myapp-v1.0.tar myapp:latest
+docker save -o nginx.tar nginx:alpine
+
+# 也可以保存多个镜像到一个文件
+docker save -o all_images.tar nginx:alpine redis:latest
+
+# 或者通过镜像ID保存
+docker save -o image_backup.tar a1b2c3d4e5f6
+
+docker save -o nginx--1.30--20260509.tar nginx:1.30
+docker save -o nginx--stable--20260509.tar nginx:stable
+docker save -o nginx--alpine--20260509.tar nginx:alpine
+
+# 加载Docker镜像 ---------------------------
+docker load -i D:\_docker_service\verdaccio\verdaccio--7.x-next.tar
+docker load -i /data/docker_images/alpine--3.22--20260625.tar
+docker load -i /data/docker_images/certbot--v5.6.0--20260625.tar
+docker load -i /data/docker_images/gitea--1.26-nightly-rootless--20260509.tar
+docker load -i /data/docker_images/nginx--1.30-alpine--20260509.tar
+
+```
+
 
 ## 二、容器（Container）生命周期
 
@@ -31,7 +59,7 @@ Docker 常用操作命令的分类整理，涵盖**镜像管理、容器生命�
 
 ### 常用 `docker run`参数
 
-```
+```bash
 -d        # 后台运行
 -p 主机端口:容器端口  # 端口映射
 -v 主机目录:容器目录  # 挂载数据卷
@@ -39,6 +67,11 @@ Docker 常用操作命令的分类整理，涵盖**镜像管理、容器生命�
 --rm                  # 退出后自动删除容器
 -e KEY=VALUE          # 设置环境变量
 --network 网络名      # 指定网络
+
+
+# 如
+docker run --rm --entrypoint certbot certbot certonly --webroot -w /var/www/certbot --email penn6699@126.com --agree-tos --no-eff-email --cert-name penn.ink -d penn.ink -d abc.penn.ink
+
 ```
 
 ### 2. 查看与管理

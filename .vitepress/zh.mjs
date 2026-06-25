@@ -64,12 +64,21 @@ export const zh = defineConfig({
       '/zh/software/': [
         {
           text: '内网穿透软件',
-          items: [{ text: 'FRP', link: '/zh/software/frp' }]
-        }
+          items: [
+            { text: 'FRP', link: '/zh/software/frp' },
+          ]
+        },
+        {
+          text: 'Linux',
+          items: [
+            { text: 'Tmux', link: '/zh/software/i_0001_tmux' },
+          ]
+        },
       ],
       '/zh/docker/': [
         { text: 'Docker', link: '/zh/docker/docker' },
         { text: 'Docker操作命令', link: '/zh/docker/i_0001_command' },
+        { text: 'Docker操作命令-网络命令', link: '/zh/docker/i_0002_command_network' },
       ],
       '/zh/python/': [
         { text: 'Python', link: '/zh/python/python' },
