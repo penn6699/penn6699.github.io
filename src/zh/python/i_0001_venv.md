@@ -125,7 +125,7 @@ rm -rf venv
 ✔ 不提交 `venv/` 到 Git
 ✔ `.gitignore` 中加入：
 
-```gitignore
+```txt
 venv/
 .env
 ```
