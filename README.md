@@ -1,4 +1,4 @@
-# mind-map文档站点
+# 写码也写心
 
 ## 推送代码到 github
 
@@ -29,15 +29,16 @@ vitepress-plugin-llms 是一个专为 VitePress 文档站点设计的插件，�
 #### 核心功能
 
 1. **自动生成 LLM 友好文档**：
+
    - `llms.txt`：包含所有文档章节链接的索引文件，相当于给 AI 看的"地图"。
    - `llms-full.txt`：将整个站点的文档内容合并到一个文件中，方便 LLM 一次性读取完整上下文。
    - 每页的 LLM 友好 Markdown 文件：为每个页面生成精简的 Markdown 文件。
-
 2. **双面内容控制**：
+
    - `<llm-only>`标签：标记只给 AI 看的内容，如给 AI 的特定指令或详细代码上下文。
    - `<llm-exclude>`标签：标记只给人类看的内容，如广告、交互式 Demo 等视觉装饰元素。
-
 3. **HTML 清理与智能集成**：
+
    - 自动去除 HTML 标签，生成更干净的文本。
    - 根据 VitePress 的侧边栏配置自动生成文档结构。
 
@@ -162,7 +163,6 @@ Pagefind 是一个完全静态的搜索库，基于 Rust 实现，直接解析�
    # 或
    pnpm add vitepress-plugin-pagefind
    ```
-
 2. **在配置文件中引入**
    在 .vitepress/config.ts中配置：
 
