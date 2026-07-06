@@ -83,8 +83,9 @@ export const zh = defineConfig({
       ],
       '/zh/python/': [
         { text: 'Python', link: '/zh/python/python' },
-        { text: 'Python虚拟环境', link: '/zh/python/i_0001_venv' }
-      
+        { text: 'Python虚拟环境', link: '/zh/python/i_0001_venv' },
+        { text: 'Python版本管理pyenv工具', link: '/zh/python/i_0002_pyenv' },
+        { text: 'Python版本管理与虚拟环境uv工具', link: '/zh/python/i_0003_uv' },
       ],
       '/zh/django/': [{ text: 'Django', link: '/zh/django/django' }],
       '/zh/frontend/': [
