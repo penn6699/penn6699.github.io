@@ -79,6 +79,7 @@ export const zh = defineConfig({
         { text: 'Docker', link: '/zh/docker/docker' },
         { text: 'Docker操作命令', link: '/zh/docker/i_0001_command' },
         { text: 'Docker操作命令-网络命令', link: '/zh/docker/i_0002_command_network' },
+        { text: 'Docker安装(Alibaba Cloud Linux 4)', link: '/zh/docker/i_000_3_docker_install' },
       ],
       '/zh/python/': [
         { text: 'Python', link: '/zh/python/python' },
