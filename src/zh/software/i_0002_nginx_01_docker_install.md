@@ -18,7 +18,7 @@ Nginx + Let's Encrypt（docker compose / 生产用）
 - `nginx/conf.d/10-https.conf.example`：HTTPS 配置示例（首次签发证书后再启用）
 - `certbot/entrypoint.sh`：定时续期脚本（续期成功后 reload Nginx）
 
- 目录附件：[nginx_web-20260710.zip](..\..\assets\file\nginx_web-20260710.zip) 
+ 目录附件：[nginx_web-20260710.zip](/assets/file/nginx_web-20260710.zip) 
 
  目录文件内容：
 
