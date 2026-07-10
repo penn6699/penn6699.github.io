@@ -74,6 +74,15 @@ export const zh = defineConfig({
             { text: 'Tmux', link: '/zh/software/i_0001_tmux' },
           ]
         },
+        {
+          text: 'Nginx',
+          items: [
+            { text: 'docker-compose部署nginx并配置Https证书', link: '/zh/software/i_0002_nginx_01_docker_install' },
+            { text: '记录--Nginx优化反向代理总网关配置方案', link: '/zh/software/i_0002_nginx_02' },
+
+            
+          ]
+        },
       ],
       '/zh/docker/': [
         { text: 'Docker', link: '/zh/docker/docker' },
