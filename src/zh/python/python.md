@@ -2,11 +2,11 @@
 
 
 
-# 命令
+## 一、命令
 
 
 
-### 查找当前Python的位置
+### 1、查找当前Python的位置
 
 ```bash
 where python
