@@ -6,11 +6,11 @@ export default {
   ],
 
   footer: {
-    message: 'MIT License.',
-    copyright: 'Copyright © 2025-present  写码也写心'
+    message: '',
+    copyright: '<a href="http://beian.miit.gov.cn" target="_blank">粤ICP备18009391号-1 </a>'
   },
 
   outline: {
-    level: [2, 5]
+    level: [2, 6]
   }
 }
