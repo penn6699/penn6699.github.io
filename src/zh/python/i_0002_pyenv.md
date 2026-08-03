@@ -299,3 +299,130 @@ which -a python  # 第一个是 shim，第二个才是 /原来的/path/python3
 ```
 
 `pyenv version` 看的是 pyenv 视角下的"当前生效版本"，`python --version` 看的是真正跑起来的版本号，两个对着看就不会懵。
+
+
+
+# **常见问题及解决方案**
+
+### **问题 1：PATH 环境变量顺序问题**
+
+这是最常见的问题。在 Windows 上，系统 Python 路径可能优先于 pyenv 路径。
+
+**解决方法：**
+
+```bash
+# 1. 检查PATH顺序
+echo %PATH%
+
+# 2. 确保pyenv的shims路径在系统路径之前
+# 通常应该是：%USERPROFILE%\.pyenv\pyenv-win\shims
+```
+
+在环境变量设置中，确保`%USERPROFILE%\.pyenv\pyenv-win\shims`在系统 Python 路径之前。
+
+### **问题 2：没有正确安装 Python 3.9.0**
+
+```bash
+# 检查是否已安装3.9.0
+pyenv versions
+
+# 如果未安装，先安装
+pyenv install 3.9.0
+```
+
+### **问题 3：终端会话问题**
+
+关闭当前终端窗口，重新打开一个新的终端窗口再试。
+
+### **问题 4：.python-version 文件创建问题**
+
+```bash
+# 检查当前目录是否有.python-version文件
+dir .python-version
+# 或
+ls -la | findstr ".python-version"
+
+# 如果没有，重新设置
+pyenv local 3.9.0
+```
+
+## 3. **完整排查步骤**
+
+```bash
+# 步骤1：重新设置版本
+cd 你的项目目录
+pyenv local 3.9.0
+
+# 步骤2：验证设置
+pyenv version
+
+# 步骤3：重置PATH
+pyenv rehash
+
+# 步骤4：在PowerShell中重新初始化
+$env:Path = [System.Environment]::GetEnvironmentVariable("Path","Machine") + ";" + [System.Environment]::GetEnvironmentVariable("Path","User")
+```
+
+## 4. **替代方法**
+
+### **方法 A：使用全局设置**
+
+```bash
+# 临时解决方案，设置全局版本
+pyenv global 3.9.0
+```
+
+### **方法 B：直接调用特定 Python 版本**
+
+```bash
+# 使用完整路径
+%USERPROFILE%\.pyenv\pyenv-win\versions\3.9.0\python.exe
+```
+
+### **方法 C：创建虚拟环境**
+
+```bash
+# 如果pyenv有问题，使用virtualenv
+python -m venv venv
+# 激活虚拟环境
+venv\Scripts\activate
+```
+
+## 5. **验证是否安装成功**
+
+```bash
+# 检查3.9.0是否已安装
+where python
+# 应该显示类似：C:\Users\用户名\.pyenv\pyenv-win\shims\python.exe
+
+# 或者
+python -c "import sys; print(sys.executable)"
+```
+
+## 6. **Windows 特有注意事项**
+
+1. **以管理员身份运行终端**，特别是修改了环境变量后
+2. **重启电脑**，确保环境变量生效
+3. **检查杀毒软件**，某些杀毒软件可能阻止环境变量修改
+4. **使用 PowerShell 而不是 CMD**，因为 PowerShell 对 pyenv-win 支持更好
+
+## 7. **快速修复脚本**
+
+在 PowerShell 中运行：
+
+```powershell
+# 清理并重新设置
+pyenv rehash
+[Environment]::SetEnvironmentVariable("PATH", [Environment]::GetEnvironmentVariable("PATH", "User"), "Process")
+```
+
+如果以上方法都不行，考虑：
+
+1. 重新安装 pyenv-win
+2. 使用 conda 或官方 Python 安装程序管理多版本
+3. 使用 Docker 容器来隔离 Python 环境
+
+
+
+
+
