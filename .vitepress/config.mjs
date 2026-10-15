@@ -35,7 +35,8 @@ export default defineConfig({
     //   }`
     // ]
   ],
-  outDir: './dist',
+  //outDir: './dist',
+  outDir: './docs',
   themeConfig: {
     search: {
       provider: 'local',
