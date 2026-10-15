@@ -17,7 +17,7 @@ export const zh = defineConfig({
         activeMatch: '/zh/sample_reels/'
       },
       {
-        text: '软件',
+        text: '应用软件',
         link: '/zh/software/frp',
         activeMatch: '/zh/software/'
       },
