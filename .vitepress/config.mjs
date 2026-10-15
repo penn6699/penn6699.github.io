@@ -10,7 +10,7 @@ export default defineConfig({
   },
   srcDir: 'src',
   base: '/',
-  // title: '写码也写心',
+  // title: '码上无界',
   head: [
     ['link', { rel: 'icon', href: '/logo.png' }]
     // [

@@ -4,7 +4,7 @@ import common from './common.mjs'
 export const zh = defineConfig({
   description: '一个强大的Web思维导图',
 
-  title: '写码也写心',
+  title: '码上无界',
   themeConfig: {
     ...common,
 

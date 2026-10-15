@@ -3,7 +3,7 @@
 layout: home
 
 hero:
-  name: "写码也写心"
+  name: "码上无界"
   text: ""
   tagline: "笃行致远"
   
